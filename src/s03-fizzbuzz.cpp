@@ -4,7 +4,7 @@ auto main(int, char* argv[]) -> int
 {
         auto a = std::stoi( argv[1] );
 	int n;
-	for (n = 1; n < a; ++n)
+	for (n = 1; n <= a; ++n)
 	{
 		if ( n % 3 == 0 && n % 5 != 0) std::cout << n << " Fizz \n";
 		if ( n % 5 == 0 && n % 3 != 0) std::cout << n << " Buzz \n";
