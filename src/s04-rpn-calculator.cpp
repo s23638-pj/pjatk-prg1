@@ -3,6 +3,7 @@
 #include <iterator>
 #include <string>
 #include <vector>
+<<<<<<< HEAD
 #include <stdexcept>
 #include <stack>
 #include <cmath>
@@ -173,5 +174,20 @@ auto main(int argc, char* argv[]) -> int
 			std::cerr << "error: " << each << ": " << e.what() << "\n";
 		}
 	}
+=======
+
+auto main(int argc, char* argv[]) -> int
+{
+        auto args = std::vector<std::string>{};
+	std::copy_n(argv, argc, std::back_inserter(args));
+	//auto w = 0;
+
+	for (auto const& each : args) {
+		std::cout << each << "\n";
+		//w += args;
+		std::cout << w << "\nn";
+	}
+
+>>>>>>> a458242eaddd01f92ac980d390d1171d108d0940
 	return 0;
 }
