@@ -17,7 +17,7 @@ auto main() -> int
 	auto const b = d100(rd);
 	do
 	{
-		auto const a = ask_user_for_integer("");
+		a = ask_user_for_integer("");
 
 		if( a < b )
 		{
