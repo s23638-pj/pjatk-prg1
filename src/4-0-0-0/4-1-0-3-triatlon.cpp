@@ -11,21 +11,21 @@ auto ask_user_for_integer(std::string const prompt) -> int
 	return std::stoi(value);
 }
 
-auto asum(int a[], int n) -> int
+enum dyscypliny
 {
-	auto suma = 0;
-	for(auto i = 0; i < n; i++)
-	{
-		suma += a[i];
-	};
-	return suma;
-}
+	bieganie,
+	jezdziectwo,
+	kolarstwo,
+	plywanie,
+	rzut_oszczepem,
+	skok_w_dal,
+	wspinaczka,
+	zapasy
+};
 
 auto main() -> int
 {
-	auto n = ask_user_for_integer("Podaj n: ");
-	int a[10] = { 42, 9, -1, 18, 59, 3, 101, 31, 72, 12 };
-	asum(a, n);
-	std::cout << std::endl;
+	dyscypliny triathlon = bieganie, kolarstwo, plywanie;
+	std::cout << triathlon << std::endl;
 	return 0;
 }

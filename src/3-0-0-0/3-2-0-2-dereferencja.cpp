@@ -11,21 +11,17 @@ auto ask_user_for_integer(std::string const prompt) -> int
 	return std::stoi(value);
 }
 
-auto asum(int a[], int n) -> int
+auto print(std::string const &a) -> void
 {
-	auto suma = 0;
-	for(auto i = 0; i < n; i++)
-	{
-		suma += a[i];
-	};
-	return suma;
+//	std::string ad = std::to_string(*ap);
+	std::cout << &a << " = " << a << std::endl;
 }
 
 auto main() -> int
 {
-	auto n = ask_user_for_integer("Podaj n: ");
-	int a[10] = { 42, 9, -1, 18, 59, 3, 101, 31, 72, 12 };
-	asum(a, n);
-	std::cout << std::endl;
+//	std::string const a = "Hello, World!";
+//	auto ap = &a;
+	print("Hello, World!");
+//	std::cout << ap << std::endl;
 	return 0;
 }

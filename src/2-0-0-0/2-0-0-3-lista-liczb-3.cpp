@@ -30,7 +30,7 @@ auto main() -> int
 		{
 			std::cout << a << "\n";
 		}
-		a++;
+		a += s;
 	}
 	return 0;
 }

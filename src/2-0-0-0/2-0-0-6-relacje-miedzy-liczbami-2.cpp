@@ -2,14 +2,14 @@
 
 auto main(int argc, char* argv[]) -> int
 {
-	for(auto i = 2; i < argc; i++)
-	{
-      		if(std::stoi(argv[1]) > std::stoi(argv[i])) { std::cout << std::stoi(argv[1]) << " > " << std::stoi(argv[i]); }
-      		else if (std::stoi(argv[1]) < std::stoi(argv[i])) { std::cout << std::stoi(argv[1]) << " < " << std::stoi(argv[i]); }
-      		else { std::cout << std::stoi(argv[1]) << " == " << std::stoi(argv[i]); }
+	auto const x = std::stoi(argv[1]);
+	for (auto i = 2; i < argc; ++i) {
+		auto const y = std::stoi(argv[i]);
 
-		std::cout << "\n";
+		if(x > y)	{std::cout << x << " > " << y;}
+		else if(x < y)	{std::cout << x << " < " << y;}
+		else		{std::cout << x << " = " << y;}
 	}
-
+	std::cout << std::endl;
 	return 0;
 }

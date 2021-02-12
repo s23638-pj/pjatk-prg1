@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 
@@ -11,21 +12,27 @@ auto ask_user_for_integer(std::string const prompt) -> int
 	return std::stoi(value);
 }
 
-auto asum(int a[], int n) -> int
+struct kwadrat
 {
-	auto suma = 0;
-	for(auto i = 0; i < n; i++)
-	{
-		suma += a[i];
-	};
-	return suma;
-}
+	float bok;
 
+	auto area(float bok) const -> float
+	{
+		return bok*bok;
+	}
+};
+/*
+auto area() const -> float
+{
+
+}
+*/
 auto main() -> int
 {
-	auto n = ask_user_for_integer("Podaj n: ");
-	int a[10] = { 42, 9, -1, 18, 59, 3, 101, 31, 72, 12 };
-	asum(a, n);
-	std::cout << std::endl;
+	//auto n = ask_user_for_integer("Podaj n: ");
+	kwadrat k1;
+	k1.bok = 4;
+	k1.area(bok);
+	std::cout << k1.bok << std::endl;
 	return 0;
 }
